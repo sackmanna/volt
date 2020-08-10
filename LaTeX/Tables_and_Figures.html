@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
@@ -29,14 +30,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://eps-libraries-berkeley.github.io/volt/LaTeX/Tables_and_Figures.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="volt" href="../README.html" />
-    <link rel="prev" title="Introduction to LaTeX: Basics" href="Basics.html" />
+    <link rel="next" title="Equations and Formulas" href="Equations_and_Formulas.html" />
+    <link rel="prev" title="LaTeX Basics" href="Basics.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://eps-libraries-berkeley.github.io/volt/LaTeX/Tables_and_Figures.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Tables and Figures" />
+<meta property="og:description" content="Tables and Figures  Objective: Learn the basic commands to create and edit tables.  Tables  Basic tables can be created with a combination of the commands below" />
+<meta property="og:image"       content="https://eps-libraries-berkeley.github.io/volt/_static/EPS-Logo.png" />
+
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -65,57 +83,124 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
-  <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="../Introduction/Welcome.html">Welcome</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Research Workflows</p>
-</li>
-  <li class="">
-    <a href="../Research_Workflows/Introduction_Research_Workflows.html">Introduction to Research Workflows</a>
-  </li>
-  <li class="">
-    <a href="../Research_Workflows/Research_Workflows_Part2.html">Part 2</a>
-  </li>
-  <li class="">
-    <a href="../Research_Workflows/Finding_articles.html">Finding articles</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Search</p>
-</li>
-  <li class="">
-    <a href="../Search/Search.html">Search</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">LaTeX</p>
-</li>
-  <li class="active">
-    <a href="Intro_to_LaTeX.html">Introduction to Latex</a>
-  <ul class="nav sidenav_l2">
-    <li class="">
-      <a href="Basics.html">Introduction to LaTeX: Basics</a>
-    </li>
-    <li class="active">
-      <a href="">Tables and Figures</a>
-    </li>
-  </ul>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Other</p>
-</li>
-  <li class="">
-    <a href="../README.html">volt</a>
-  </li>
+  <p class="caption">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Introduction/eps_libraries.html">
+   EPS Libraries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Introduction/research_workflows.html">
+   Research Workflows
+  </a>
+ </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Searching
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Search/searching_for_resources.html">
+   Searching for resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Search/exploring_article_databases.html">
+   Exploring article databases
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Search/apis.html">
+   Introduction to searching with APIs
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Organizing
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Organizing/Finding_articles.html">
+   Finding articles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Organizing/Reference_Management_and_Citations.html">
+   Reference Management and Citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Organizing/Data_Management.html">
+   Data Management
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Writing
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="Intro_to_LaTeX.html">
+   Introduction to Latex
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Basics.html">
+     LaTeX Basics
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Tables and Figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Equations_and_Formulas.html">
+     Equations and Formulas
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Special Topics
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Special_Topics/digital-mapping.html">
+   Digital Mapping
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   VOLT
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -169,22 +254,84 @@
         <!-- Launch buttons -->
 
     </div>
+
+    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1-two-column-table">
+     Example 1: two column table
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-vertical-and-horizontal-lines-are-added">
+     Example 2: vertical and horizontal lines are added
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3-with-caption-and-centering">
+     Example 3: With caption and centering
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     <em>
+      Exercise 1
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     <em>
+      Exercise 2
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figures">
+   Figures
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1-upload-a-figure">
+     <em>
+      Exercise 1: Upload a figure
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-placement">
+     Figure Placement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-designate-figure-position">
+     <em>
+      Exercise 2: Designate figure position
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syncing-and-uploading-figures-hosted-elsewhere">
+     Syncing and Uploading figures hosted elsewhere
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#create-basic-table" class="nav-link">Create basic table</a>
-        </li>
-    
-    </ul>
-</nav>
-
-
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -195,9 +342,32 @@
   <div class="section" id="tables-and-figures">
 <h1>Tables and Figures<a class="headerlink" href="#tables-and-figures" title="Permalink to this headline">¶</a></h1>
 <p><em>Objective: Learn the basic commands to create and edit tables.</em></p>
-<div class="section" id="create-basic-table">
-<h2>Create basic table<a class="headerlink" href="#create-basic-table" title="Permalink to this headline">¶</a></h2>
-<p>Use the tabularx package to create a simple table of the US Women’s Soccer Team’s 2019 World Cup Starting Roster: https://www.ussoccer.com/players</p>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<p>Basic tables can be created with a combination of the commands below and the <strong>use package</strong>: <code class="docutils literal notranslate"><span class="pre">tabularx</span></code></p>
+<p>|Basic Commands|Description|
+|—–||
+|<code class="docutils literal notranslate"><span class="pre">l,</span> <span class="pre">r,</span> <span class="pre">c</span></code> | column alignment|
+|<code class="docutils literal notranslate"><span class="pre">&amp;</span></code> |ampersand separates columns|
+| <code class="docutils literal notranslate"><span class="pre">\\</span></code> | double backslash begins new row|
+| <code class="docutils literal notranslate"><span class="pre">\hline</span></code> |horizontal line|
+| | |	vertical line|</p>
+<div class="section" id="example-1-two-column-table">
+<h3>Example 1: two column table<a class="headerlink" href="#example-1-two-column-table" title="Permalink to this headline">¶</a></h3>
+<p><img alt="Basic" src="../_images/tables_basic.png" /></p>
+</div>
+<div class="section" id="example-2-vertical-and-horizontal-lines-are-added">
+<h3>Example 2: vertical and horizontal lines are added<a class="headerlink" href="#example-2-vertical-and-horizontal-lines-are-added" title="Permalink to this headline">¶</a></h3>
+<p><img alt="Lines" src="../_images/tables_lines.png" /></p>
+</div>
+<div class="section" id="example-3-with-caption-and-centering">
+<h3>Example 3: With caption and centering<a class="headerlink" href="#example-3-with-caption-and-centering" title="Permalink to this headline">¶</a></h3>
+<p>Note the addition the <code class="docutils literal notranslate"><span class="pre">\caption</span></code> and <code class="docutils literal notranslate"><span class="pre">\centering</span></code> commands.</p>
+<p><img alt="Caption" src="../_images/tables_caption.png" /></p>
+</div>
+<div class="section" id="exercise-1">
+<h3><em>Exercise 1</em><a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">tabularx</span></code> package to create a simple table of the US Women’s Soccer Team’s 2019 World Cup Starting Roster: <a class="reference external" href="https://www.ussoccer.com/players">https://www.ussoccer.com/players</a></p>
 <p>Begin with a header row and two columns.</p>
 <ul class="simple">
 <li><p>Your two column headers will be: Position and Last Name – Left align the text of the left column</p></li>
@@ -205,12 +375,12 @@
 <li><p>Add vertical and horizontal lines</p></li>
 </ul>
 <p>Add a caption “2019 Team Roster” and center the table.<br />
-Note: Using the \caption{} command will add the phrase “Table 1” in front of caption.</p>
-<p>Use package needed: tabularx</p>
+Note: Using the <code class="docutils literal notranslate"><span class="pre">\caption{}</span></code> command will add the phrase “Table 1” in front of caption.</p>
+<p>Use package needed: <code class="docutils literal notranslate"><span class="pre">tabularx</span></code></p>
 <p>Commands needed:<br />
-&amp; = column separator<br />
-\ = begin new row<br />
-l, r, c = column alignment</p>
+<code class="docutils literal notranslate"><span class="pre">&amp;</span></code> = column separator<br />
+<code class="docutils literal notranslate"><span class="pre">\\</span></code> = begin new row<br />
+<code class="docutils literal notranslate"><span class="pre">l,</span> <span class="pre">r,</span> <span class="pre">c</span></code> = column alignment</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Position</p></th>
@@ -242,8 +412,99 @@ l, r, c = column alignment</p>
 </tbody>
 </table>
 </div>
+<div class="section" id="exercise-2">
+<h3><em>Exercise 2</em><a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+<p>Create a table like the one below with columns spanning multiple rows or rows spanning multiple columns.</p>
+<p><img alt="Multiple Columns" src="../_images/tables_multi.png" /></p>
+<p><em>Questions?</em><br />
+Consult the answer key in the Overleaf Project to troubleshoot: <a class="reference external" href="https://www.overleaf.com/read/vkpyvmhgzsgm">https://www.overleaf.com/read/vkpyvmhgzsgm</a></p>
+<p>Information sources:</p>
+<ul class="simple">
+<li><p>Roster: <a class="reference external" href="https://www.ussoccer.com/players">https://www.ussoccer.com/players</a></p></li>
+<li><p>Tables info: <a class="reference external" href="https://en.wikibooks.org/wiki/LaTeX/Tables">https://en.wikibooks.org/wiki/LaTeX/Tables</a></p></li>
+<li><p>Multicolumn/Multirow: <a class="reference external" href="https://en.wikibooks.org/wiki/LaTeX/Tables">https://en.wikibooks.org/wiki/LaTeX/Tables</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="figures">
+<h2>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h2>
+<p><em>Objective:</em> Learn to upload and position figures in Overleaf.</p>
+<div class="section" id="exercise-1-upload-a-figure">
+<h3><em>Exercise 1: Upload a figure</em><a class="headerlink" href="#exercise-1-upload-a-figure" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>To upload image, choose an image of your own, or find file at: <a class="reference external" href="https://github.com/samteplitzky/EPS-Latex-Workshop">https://github.com/samteplitzky/EPS-Latex-Workshop</a></p></li>
+<li><p>Download keyboard_cat.png, and upload file to the Overleaf project.</p></li>
+<li><p>Place image with these commands:<br />
+<code class="docutils literal notranslate"><span class="pre">\usepackage{graphicx}</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">\includegraphics[width=0.4\textwidth]{keyboard_cat}</span></code></p></li>
+</ol>
+<p><img alt="cat" src="../_images/keyboard_cat.png" /></p>
+</div>
+<div class="section" id="figure-placement">
+<h3>Figure Placement<a class="headerlink" href="#figure-placement" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Specifier</p></th>
+<th class="head"><p>Permission</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>h</p></td>
+<td><p>Place the float here: approximately, not exactly, at the same point it occurs in the source text</p></td>
+</tr>
+<tr class="row-odd"><td><p>t</p></td>
+<td><p>Position at the top of the page</p></td>
+</tr>
+<tr class="row-even"><td><p>b</p></td>
+<td><p>Position at the bottom of the page</p></td>
+</tr>
+<tr class="row-odd"><td><p>p</p></td>
+<td><p>Put on a special page for floats only</p></td>
+</tr>
+<tr class="row-even"><td><p>!</p></td>
+<td><p>Override internal parameters LaTeX uses for determining “good” float positions</p></td>
+</tr>
+<tr class="row-odd"><td><p>H</p></td>
+<td><p>Places the float at precisely the location in the LaTeX code. Requires the float package. This is somewhat equivalent to h!</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="exercise-2-designate-figure-position">
+<h3><em>Exercise 2: Designate figure position</em><a class="headerlink" href="#exercise-2-designate-figure-position" title="Permalink to this headline">¶</a></h3>
+<p>Use b, t, h to see where figure moves. You might need to add additional text in the document to see how the figure placement varies.</p>
+<p><code class="docutils literal notranslate"><span class="pre">\begin{figure}[b]</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">\centering</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">\includegraphics[width=0.6\textwidth]{keyboard_cat}</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">\end{figure}</span></code></p>
+</div>
+<div class="section" id="syncing-and-uploading-figures-hosted-elsewhere">
+<h3>Syncing and Uploading figures hosted elsewhere<a class="headerlink" href="#syncing-and-uploading-figures-hosted-elsewhere" title="Permalink to this headline">¶</a></h3>
+<p>Google Drive: <a class="reference external" href="https://www.overleaf.com/help/247-how-can-i-upload-files-from-google-drive#.W4WtwhPwZE5">https://www.overleaf.com/help/247-how-can-i-upload-files-from-google-drive#.W4WtwhPwZE5</a><br />
+GitHub/Dropbox: <a class="reference external" href="https://www.overleaf.com/help/343#.W4WtgxPwZE4">https://www.overleaf.com/help/343#.W4WtgxPwZE4</a></p>
+</div>
+</div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./LaTeX"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -253,8 +514,8 @@ l, r, c = column alignment</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Basics.html" title="previous page">Introduction to LaTeX: Basics</a>
-    <a class='right-next' id="next-link" href="../README.html" title="next page">volt</a>
+    <a class='left-prev' id="prev-link" href="Basics.html" title="previous page">LaTeX Basics</a>
+    <a class='right-next' id="next-link" href="Equations_and_Formulas.html" title="next page">Equations and Formulas</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
